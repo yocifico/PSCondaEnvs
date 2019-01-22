@@ -36,6 +36,11 @@ if (-not $condaEnvName)
 
 if (-not (Test-Path $env:ANACONDA_ENVS\$condaEnvName\Python.exe))
 {
+    $anacondaInstallPath = "$env:LocalAppData\conda\conda"
+    $env:ANACONDA_ENVS = $anacondaInstallPath + '\envs'
+}
+if (-not (Test-Path $env:ANACONDA_ENVS\$condaEnvName\Python.exe))
+{
     Write-Host
     Write-Warning "No environment named `"$condaEnvName`" exists in $env:ANACONDA_ENVS."
     Write-Host
