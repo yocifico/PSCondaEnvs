@@ -57,7 +57,7 @@ $env:CONDA_DEFAULT_ENV = $condaEnvName
 Write-Host
 Write-Host "Activating environment `"$env:CONDA_DEFAULT_ENV...`""
 $env:ANACONDA_BASE_PATH = $env:PATH
-$env:PATH="$env:ANACONDA_ENVS\$env:CONDA_DEFAULT_ENV\;$env:ANACONDA_ENVS\$env:CONDA_DEFAULT_ENV\Scripts\;$env:ANACONDA_BASE_PATH"    
+$env:PATH="$env:ANACONDA_ENVS\$env:CONDA_DEFAULT_ENV\;$env:ANACONDA_ENVS\$env:CONDA_DEFAULT_ENV\Scripts\;$env:ANACONDA_ENVS\$env:CONDA_DEFAULT_ENV\Library\bin\;$env:ANACONDA_BASE_PATH"    
 Write-Host
 Write-Host
 
